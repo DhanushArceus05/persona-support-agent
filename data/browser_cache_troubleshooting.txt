@@ -1,0 +1,90 @@
+BROWSER & CACHE TROUBLESHOOTING GUIDE
+======================================
+
+1. HOW TO CLEAR COOKIES AND CACHE
+------------------------------------
+
+Google Chrome:
+  1. Press Ctrl + Shift + Delete (Windows/Linux) or Cmd + Shift + Delete (Mac).
+  2. Set time range to "All time".
+  3. Check "Cookies and other site data" and "Cached images and files".
+  4. Click "Delete data".
+  5. Restart Chrome and try logging in again.
+
+Mozilla Firefox:
+  1. Press Ctrl + Shift + Delete.
+  2. Select "Everything" for the time range.
+  3. Check "Cookies" and "Cache".
+  4. Click "Clear Now".
+
+Safari (Mac):
+  1. Go to Safari menu -> Preferences -> Privacy.
+  2. Click "Manage Website Data" -> "Remove All".
+  3. Alternatively, go to Develop menu -> Empty Caches.
+  (Enable Develop menu: Safari Preferences -> Advanced -> Show Develop menu)
+
+Microsoft Edge:
+  1. Press Ctrl + Shift + Delete.
+  2. Choose "All time" as the time range.
+  3. Check "Cookies and other site data" and "Cached images and files".
+  4. Click "Clear now".
+
+Mobile Browsers:
+  - Chrome (Android): Menu (three dots) -> Settings -> Privacy -> Clear browsing data.
+  - Safari (iOS): Settings app -> Safari -> Clear History and Website Data.
+
+2. WHY CLEARING CACHE HELPS
+-----------------------------
+Our platform regularly releases updates. Your browser may be serving an
+outdated version of the application from its local cache. Clearing the
+cache forces the browser to download the latest version from our servers,
+which resolves:
+  - Pages that fail to load or display blank screens.
+  - Buttons or forms that do not respond.
+  - Login redirect loops.
+  - Outdated dashboard widgets showing stale data.
+
+3. WHEN THE ISSUE PERSISTS AFTER CLEARING CACHE
+-------------------------------------------------
+If the problem continues after clearing cache:
+  a. Try an Incognito / Private Browsing window.
+     This bypasses all stored cookies, extensions, and cached data.
+  b. Try a different browser (e.g., Chrome if you normally use Firefox).
+  c. Disable browser extensions one by one to identify conflicting add-ons.
+  d. Check if JavaScript is enabled:
+     Chrome: Settings -> Privacy and Security -> Site Settings -> JavaScript -> Allowed.
+  e. Check status.platform.io for any active incidents.
+
+4. BROWSER COMPATIBILITY
+--------------------------
+Our platform is fully supported on the latest two major versions of:
+  - Google Chrome
+  - Mozilla Firefox
+  - Microsoft Edge
+  - Apple Safari
+
+Internet Explorer is NOT supported.
+
+5. THIRD-PARTY COOKIE SETTINGS
+--------------------------------
+Some platform features require third-party cookies to be enabled:
+  - Single Sign-On (SSO) via Google or Microsoft.
+  - Embedded dashboard widgets.
+  - Certain payment processors on the billing page.
+
+To enable third-party cookies:
+  Chrome: Settings -> Privacy and Security -> Third-party cookies -> Allow all.
+  Firefox: Settings -> Privacy & Security -> Custom -> Uncheck "Cookies" block.
+  Safari: Preferences -> Privacy -> Uncheck "Prevent cross-site tracking".
+
+6. CONTACT SUPPORT
+-------------------
+If you continue to experience issues after following all the steps above,
+please reach out with:
+  - Your browser name and version (Help -> About for exact version).
+  - Your operating system.
+  - A screenshot or screen recording of the issue.
+  - The URL where the problem occurs.
+
+Support email: support@platform.io
+Live Chat: Available in the dashboard (Mon-Fri 9 AM - 8 PM local time).

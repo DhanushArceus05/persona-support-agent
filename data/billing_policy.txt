@@ -1,0 +1,85 @@
+BILLING POLICY — SaaS Platform Support
+=======================================
+Last Updated: January 2025
+
+1. SUBSCRIPTION PLANS
+---------------------
+We offer three subscription tiers:
+
+  Starter    — $29/month  — Up to 5 users, 60 API req/min, 10 GB storage
+  Pro        — $99/month  — Up to 25 users, 300 API req/min, 100 GB storage
+  Enterprise — Custom     — Unlimited users, custom rate limits, dedicated SLA
+
+All plans are billed monthly or annually. Annual billing provides a 20% discount.
+
+2. PAYMENT METHODS
+------------------
+Accepted payment methods:
+  - Credit/debit cards (Visa, Mastercard, Amex)
+  - Bank transfer (Enterprise plans only)
+  - PayPal
+
+Payment is collected on the first day of each billing cycle. Failed payments
+trigger a 7-day grace period before service suspension.
+
+3. INVOICES
+-----------
+Invoices are emailed automatically on the billing date to the registered
+billing email address. To change the billing email:
+  Dashboard → Account → Billing → Update Billing Email
+
+Invoice history is available under Dashboard → Billing → Invoice History.
+
+4. REFUND POLICY
+----------------
+4.1 Monthly Subscriptions
+  Refunds are NOT issued for partial months already in use.
+  Cancellation takes effect at the END of the current billing period.
+
+4.2 Annual Subscriptions
+  A pro-rated refund is available within the first 30 days of the annual term.
+  After 30 days, no refund is issued for remaining months.
+
+4.3 Exceptional Cases
+  Billing disputes due to platform outages exceeding 4 hours are reviewed
+  case-by-case by our billing team. Submit a dispute via:
+  support@platform.io with subject line "BILLING DISPUTE — [Account ID]"
+
+5. PLAN UPGRADES AND DOWNGRADES
+--------------------------------
+  Upgrade: Takes effect immediately. You are charged a pro-rated amount for
+           the remainder of the current cycle.
+  Downgrade: Takes effect at the start of the next billing cycle.
+             Data exceeding the new plan limits is archived (not deleted) for
+             30 days after downgrade.
+
+6. CANCELLATION
+---------------
+  Cancel any time from Dashboard → Account → Subscription → Cancel.
+  After cancellation:
+    - Access continues until end of the paid period.
+    - All data is retained for 30 days, then permanently deleted.
+    - Export your data BEFORE the retention period expires.
+
+7. TAXES
+--------
+  Applicable sales tax or VAT is added based on your billing address at
+  checkout. Tax-exempt organisations must submit a valid exemption certificate
+  via support@platform.io before their next billing cycle.
+
+8. DISPUTED OR DUPLICATE CHARGES
+----------------------------------
+  If you see a charge you do not recognise:
+  Step 1 — Check if a team member upgraded the account.
+  Step 2 — Review invoice history in the dashboard.
+  Step 3 — Contact billing support within 60 days of the charge:
+            Email: billing@platform.io
+            Phone: 1-800-555-0199 (Mon–Fri, 9 AM–6 PM EST)
+
+  Disputes submitted after 60 days may not be eligible for review.
+
+9. ENTERPRISE CUSTOM CONTRACTS
+-------------------------------
+  Enterprise customers with custom MSAs should refer to the contract terms
+  for SLA credits, payment schedules, and refund eligibility.
+  Contact your dedicated Customer Success Manager for contract-related queries.

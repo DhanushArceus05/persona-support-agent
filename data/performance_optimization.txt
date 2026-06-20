@@ -1,0 +1,82 @@
+PLATFORM PERFORMANCE & OPTIMIZATION GUIDE
+==========================================
+
+1. API RATE LIMIT BEST PRACTICES
+----------------------------------
+To avoid hitting rate limits (HTTP 429):
+
+a. Implement Exponential Backoff
+   When a 429 is received, wait before retrying:
+     Attempt 1: wait 1 second
+     Attempt 2: wait 2 seconds
+     Attempt 3: wait 4 seconds
+     Attempt 4: wait 8 seconds
+   Add random jitter (0-1 sec) to prevent thundering herd.
+
+b. Use Bulk Endpoints
+   Instead of individual item endpoints, use bulk APIs where available:
+     POST /v3/items/bulk  (up to 100 items per request)
+   This reduces call count by up to 100x.
+
+c. Cache Responses Locally
+   Cacheable resources (configuration, user profiles, schema definitions)
+   should be cached locally for 5–15 minutes. Use an ETag or Last-Modified
+   header to validate stale cache entries.
+
+d. Request Only Needed Fields
+   Use the ?fields= query parameter to fetch only required attributes:
+     GET /v3/users?fields=id,email,role
+   Reduces payload size and server processing time.
+
+2. DASHBOARD LOADING PERFORMANCE
+----------------------------------
+If the dashboard loads slowly:
+  - Clear browser cache and cookies (Ctrl+Shift+Delete).
+  - Disable browser extensions that intercept network requests.
+  - Use a Chromium-based browser (Chrome/Edge) for best compatibility.
+  - Check status.platform.io for ongoing incidents.
+  - Try accessing via a different network or disable VPN/proxy.
+
+3. DATA EXPORT OPTIMIZATION
+-----------------------------
+Large data exports (>1 million rows) should use:
+  - The async export API instead of synchronous endpoints.
+  - Filter exports by date range to reduce payload size.
+  - Request exports during off-peak hours (2 AM–6 AM local time).
+
+4. WEBHOOK DELIVERY OPTIMIZATION
+-----------------------------------
+  - Use HTTPS endpoints with response time < 5 seconds.
+  - Return HTTP 200 immediately and process asynchronously.
+  - Events not acknowledged within 30 seconds are retried (up to 5 attempts).
+  - Use the webhook event log to replay failed deliveries.
+
+5. STORAGE USAGE REDUCTION
+----------------------------
+If approaching storage limits:
+  - Archive old projects (Dashboard -> Projects -> Archive).
+  - Delete unused file attachments (Dashboard -> Storage -> Manage Files).
+  - Enable auto-archiving: Dashboard -> Settings -> Storage -> Auto-Archive
+    after N days of inactivity.
+
+6. MONITORING RECOMMENDATIONS
+-------------------------------
+We recommend setting up alerts for:
+  - API error rate > 1% over 5 minutes.
+  - Response latency > 2 seconds (p99).
+  - Storage utilisation > 80%.
+
+Use our Monitoring API or connect your existing APM tools:
+  - Datadog integration: Dashboard -> Integrations -> Datadog
+  - PagerDuty integration: Dashboard -> Integrations -> PagerDuty
+  - Custom webhooks for other alert channels.
+
+7. ENTERPRISE PERFORMANCE FEATURES
+-------------------------------------
+Enterprise customers have access to:
+  - Dedicated compute regions (EU, US-East, US-West, APAC).
+  - Private network peering (VPC/VPN connectivity).
+  - Read replicas for high-throughput reporting.
+  - Priority queue for API requests during traffic spikes.
+
+Contact your Customer Success Manager to enable these features.

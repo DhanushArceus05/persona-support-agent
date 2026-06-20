@@ -1,0 +1,78 @@
+SERVICE LEVEL AGREEMENT (SLA) & UPTIME POLICY
+==============================================
+Effective: January 2025
+
+1. UPTIME COMMITMENT
+---------------------
+  Starter Plan     — 99.5% monthly uptime
+  Pro Plan         — 99.9% monthly uptime
+  Enterprise Plan  — 99.95% monthly uptime (custom SLA available)
+
+Uptime is measured over a rolling calendar month, excluding scheduled maintenance.
+
+2. SCHEDULED MAINTENANCE
+-------------------------
+  - Routine maintenance occurs on the THIRD SUNDAY of each month, 2 AM–4 AM UTC.
+  - Emergency maintenance windows are announced via the Status Page and email
+    at least 1 hour in advance where operationally possible.
+  - Scheduled maintenance windows do NOT count against uptime calculations.
+
+3. INCIDENT RESPONSE TIMES
+---------------------------
+  Severity   Definition                     First Response    Resolution Target
+  ---------  -----------------------------  ----------------  -----------------
+  P1 Critical  Full service outage          15 minutes        4 hours
+  P2 High      Major feature degradation    1 hour            8 hours
+  P3 Medium    Partial feature impact       4 hours           24 hours
+  P4 Low       Minor cosmetic/UX issues     1 business day    5 business days
+
+4. SLA CREDITS
+--------------
+  If monthly uptime falls below the commitment, customers are eligible for
+  service credits applied to the next invoice:
+
+  Uptime Achieved    Credit (% of Monthly Fee)
+  ----------------   --------------------------
+  99.0% – 99.49%     10%
+  95.0% – 98.99%     25%
+  Below 95.0%        50%
+
+  To request an SLA credit:
+  - Submit a request within 30 days of the incident.
+  - Email sla-credits@platform.io with your Account ID and incident reference.
+  - Credits cannot be converted to cash.
+
+5. SUPPORT CHANNELS AND SLAs
+------------------------------
+  Channel              Availability         Response SLA
+  -------------------  -------------------  -----------------
+  In-App Chat          Mon–Fri 9 AM–8 PM    Under 2 minutes (live)
+  Email Support        24/7                 < 4 business hours
+  Phone (Enterprise)   Mon–Fri 9 AM–6 PM    Immediate
+  Status Page          Always               Real-time updates
+
+  Status Page URL: status.platform.io
+
+6. EXCLUSIONS
+--------------
+  The following are excluded from SLA calculations:
+  - Customer-caused outages (misconfigured API calls, exceeding rate limits).
+  - Third-party service failures (AWS, Stripe, Twilio).
+  - Force majeure events (natural disasters, cyberattacks beyond our control).
+  - Issues reported but not reproducible by our engineering team.
+
+7. ENTERPRISE CUSTOM SLAs
+--------------------------
+  Enterprise customers may negotiate custom SLA terms including:
+  - Higher uptime guarantees (up to 99.99%)
+  - Dedicated support engineers
+  - Proactive monitoring and runbook execution
+  - Financial penalties (not just credits) for breaches
+
+  Contact your Customer Success Manager or sales@platform.io.
+
+8. REPORTING AN INCIDENT
+-------------------------
+  Real-time incident tracking: status.platform.io
+  Report an undetected issue: support@platform.io (include timestamps, account ID,
+  affected feature, and observed vs expected behaviour).
